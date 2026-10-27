@@ -1,0 +1,155 @@
+:root {
+  --fundo: #f3f5f2;
+  --superficie: #ffffff;
+  --texto: #1d2a26;
+  --texto-suave: #5a6b65;
+  --destaque: #1f5f4a;
+  --destaque-escuro: #164536;
+  --borda: #d5ddd8;
+  --erro: #a32929;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+.pagina {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.topo h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2.25rem;
+}
+
+.topo p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.busca {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.busca input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: var(--superficie);
+}
+
+.busca button {
+  padding: 0.75rem 1.5rem;
+  font: inherit;
+  font-weight: bold;
+  color: #fff;
+  background: var(--destaque);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.busca button:hover {
+  background: var(--destaque-escuro);
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #e0a800;
+  outline-offset: 2px;
+}
+
+.status {
+  margin: 0 0 1.5rem;
+  color: var(--texto-suave);
+}
+
+.status.erro {
+  color: var(--erro);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card img,
+.sem-capa {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #e4e9e6;
+}
+
+.sem-capa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-suave);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+}
+
+.info h2 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.info .autor,
+.info .ano {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+}
+
+.info a {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--destaque);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .busca {
+    flex-direction: column;
+  }
+}
