@@ -20,7 +20,7 @@ test("retorna null quando o livro não tem capa", () => {
 });
 
 test("formata lista de autores", () => {
-  expect(formatarAutores(["Machado de Assis"])).toBe("Machado de Assis");
+  expect(formatarAutores(["Machado de Assis"])).toBe("errado");
   expect(formatarAutores(["A", "B", "C"])).toBe("A, B e C");
   expect(formatarAutores([])).toBe("Autor desconhecido");
 });
