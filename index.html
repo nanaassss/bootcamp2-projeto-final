@@ -5,10 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   
-  
  <title>📚Clube do Livro📚</title>
 </head>
 <body>
-  <script src="scripts.js" defer></script>
+   <main class="pagina">
+    <header class="topo">
+      <h1>Buscar livros</h1>
+      <p>Teste da API da Open Library: digite um título ou autor.</p>
+    </header>
+
+    <form id="form-busca" class="busca">
+      <label for="termo" class="sr-only">Título ou autor</label>
+      <input id="termo" type="search" placeholder="Ex.: dom casmurro" autocomplete="off" required />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite">
+      Nenhuma busca feita ainda.
+    </p>
+
+    <section id="resultados" class="grade" aria-label="Resultados da busca"></section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
