@@ -8,24 +8,42 @@
  <title>📚Clube do Livro📚</title>
 </head>
 <body>
+
    <main class="pagina">
     <header class="topo">
-      <h1>Buscar livros</h1>
-      <p>Teste da API da Open Library: digite um título ou autor.</p>
+      <h1>Clube do Livro</h1>
+      <p>Busque o nome do livro abaixo : </p>
     </header>
 
-    <form id="form-busca" class="busca">
-      <label for="termo" class="sr-only">Título ou autor</label>
-      <input id="termo" type="search" placeholder="Ex.: dom casmurro" autocomplete="off" required />
-      <button type="submit">Buscar</button>
-    </form>
+    <div class="abas" role="tablist" aria-label="Seções">
+      <button class="aba" role="tab" id="aba-busca" aria-controls="painel-busca" aria-selected="true">Buscar</button>
+      <button class="aba" role="tab" id="aba-favoritos" aria-controls="painel-favoritos" aria-selected="false">
+        Favoritos <span id="contador" class="contador">0</span>
+      </button>
+    </div>
 
-    <p id="status" class="status" role="status" aria-live="polite">
-      Nenhuma busca feita ainda.
-    </p>
+   
+    <section id="painel-busca" class="painel" role="tabpanel" aria-labelledby="aba-busca">
+      <form id="form-busca" class="busca">
+        <label for="termo" class="sr-only">Título ou autor</label>
+        <input id="termo" type="search" placeholder="Ex.: dom casmurro" autocomplete="off" required />
+        <button type="submit">Buscar</button>
+      </form>
 
-    <section id="resultados" class="grade" aria-label="Resultados da busca"></section>
+      <p id="status" class="status" role="status" aria-live="polite">
+        Nenhuma busca feita ainda.
+      </p>
+
+      <section id="resultados" class="grade" aria-label="Resultados da busca"></section>
+    </section>
+
+    <section id="painel-favoritos" class="painel" role="tabpanel" aria-labelledby="aba-favoritos" hidden>
+      <p id="status-fav" class="status" role="status" aria-live="polite">Carregando favoritos…</p>
+      <section id="lista-favoritos" class="grade" aria-label="Livros favoritos"></section>
+    </section>
   </main>
   <script src="script.js"></script>
+
+  
 </body>
 </html>
