@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // Rotas dos integrantes entram aqui:
-// app.use("/api/buscar", require("./routes/buscar"));   // Geovanna
+ app.use("/api/buscar",require("./routes/buscar"));   // Geovanna
 // app.use("/api/livros", require("./routes/livros"));   // Lucas
 
 const PORT = process.env.PORT || 3000;
