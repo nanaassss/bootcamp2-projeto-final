@@ -153,3 +153,71 @@ a:focus-visible {
     flex-direction: column;
   }
 }
+
+/* ===== Abas ===== */
+.abas {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+  border-bottom: 2px solid var(--borda);
+}
+
+.aba {
+  padding: 0.6rem 1.25rem;
+  font: inherit;
+  font-weight: bold;
+  color: var(--texto-suave);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+
+.aba[aria-selected="true"] {
+  color: var(--destaque);
+  border-bottom-color: var(--destaque);
+}
+
+.painel[hidden] {
+  display: none;
+}
+
+.contador {
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0 0.4em;
+  margin-left: 0.35rem;
+  font-size: 0.8rem;
+  color: #fff;
+  background: var(--destaque);
+  border-radius: 999px;
+  text-align: center;
+}
+
+/* ===== Botão favoritar ===== */
+.btn-fav {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--destaque);
+  background: var(--superficie);
+  border: 1px solid var(--destaque);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-fav:hover:not(:disabled) {
+  background: #e8f1ed;
+}
+
+.btn-fav.ativo {
+  color: #fff;
+  background: var(--destaque);
+}
+
+.btn-fav:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
