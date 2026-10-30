@@ -24,7 +24,6 @@ async function buscarLivros(termo) {
 // Configuração do SUPABASE
 const SUPABASE_URL = "https://sarazhmtidgqhywaadfo.supabase.co"; // Substitua pelo URL do seu projeto Supabase
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhcmF6aG10aWRncWh5d2FhZGZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMwNTE3NzksImV4cCI6MjEwODYyNzc3OX0.NE-lEkDWszSe0zfixoOA2Wq-LwDrq54gfviiSLuRzeM";
-
 function criarCard(livro) {
   const card = document.createElement("article");
   card.className = "card";
