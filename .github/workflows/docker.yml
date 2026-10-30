@@ -25,5 +25,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/clubedoLivro:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/clubedoLivro:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/clubedolivro:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/clubedolivro:${{ github.sha }}
