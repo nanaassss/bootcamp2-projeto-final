@@ -5,10 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   
-  
  <title>📚Clube do Livro📚</title>
 </head>
 <body>
-  <script src="scripts.js" defer></script>
+
+   <main class="pagina">
+    <header class="topo">
+      <h1>Clube do Livro</h1>
+      <p>Busque o nome do livro abaixo : </p>
+    </header>
+
+    <div class="abas" role="tablist" aria-label="Seções">
+      <button class="aba" role="tab" id="aba-busca" aria-controls="painel-busca" aria-selected="true">Buscar</button>
+      <button class="aba" role="tab" id="aba-favoritos" aria-controls="painel-favoritos" aria-selected="false">
+        Favoritos <span id="contador" class="contador">0</span>
+      </button>
+    </div>
+
+   
+    <section id="painel-busca" class="painel" role="tabpanel" aria-labelledby="aba-busca">
+      <form id="form-busca" class="busca">
+        <label for="termo" class="sr-only">Título ou autor</label>
+        <input id="termo" type="search" placeholder="Ex.: dom casmurro" autocomplete="off" required />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite">
+        Nenhuma busca feita ainda.
+      </p>
+
+      <section id="resultados" class="grade" aria-label="Resultados da busca"></section>
+    </section>
+
+    <section id="painel-favoritos" class="painel" role="tabpanel" aria-labelledby="aba-favoritos" hidden>
+      <p id="status-fav" class="status" role="status" aria-live="polite">Carregando favoritos…</p>
+      <section id="lista-favoritos" class="grade" aria-label="Livros favoritos"></section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+
+  
 </body>
 </html>
