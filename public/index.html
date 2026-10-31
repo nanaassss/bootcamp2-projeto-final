@@ -10,6 +10,11 @@
 <body>
 
    <main class="pagina">
+    <div id="sessao" class="sessao" hidden>
+      <span id="sessao-usuario"></span>
+      <button type="button" id="btn-sair">Sair</button>
+    </div>
+
     <header class="topo">
       <h1>Clube do Livro</h1>
       <p>Busque o nome do livro abaixo : </p>
@@ -42,6 +47,22 @@
       <section id="lista-favoritos" class="grade" aria-label="Livros favoritos"></section>
     </section>
   </main>
+    <dialog id="dialogo-auth" class="dialogo" aria-labelledby="titulo-auth">
+    <button type="button" id="fechar-auth" class="fechar" aria-label="Fechar">&times;</button>
+    <h2 id="titulo-auth">Entre para favoritar</h2>
+    <form id="form-auth" class="auth-form">
+      <input id="auth-nome" type="text" placeholder="Nome (só para criar conta)" autocomplete="name" maxlength="100" />
+      <input id="auth-email" type="email" placeholder="E-mail" autocomplete="email" required />
+      <input id="auth-senha" type="password" placeholder="Senha (mín. 6 caracteres)" autocomplete="current-password" minlength="6" required />
+      <div class="acoes">
+        <button type="submit" id="btn-entrar">Entrar</button>
+        <button type="button" id="btn-criar" class="secundario">Criar conta</button>
+      </div>
+    </form>
+    <p id="auth-status" class="status" role="status" aria-live="polite"></p>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
   <script src="script.js"></script>
 
   
