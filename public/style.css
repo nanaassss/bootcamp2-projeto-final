@@ -221,3 +221,107 @@ a:focus-visible {
   opacity: 0.6;
   cursor: wait;
 }
+
+/* ===== Login (janela sobre a página) ===== */
+.sessao {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+}
+
+.sessao[hidden] {
+  display: none;
+}
+
+.sessao button {
+  padding: 0.3rem 0.8rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--destaque);
+  background: var(--superficie);
+  border: 1px solid var(--destaque);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dialogo {
+  width: min(420px, calc(100% - 2rem));
+  padding: 1.5rem;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.dialogo::backdrop {
+  background: rgba(29, 42, 38, 0.55);
+}
+
+.dialogo h2 {
+  margin: 0 2rem 1rem 0;
+  font-size: 1.25rem;
+}
+
+.fechar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--texto-suave);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.auth-form input {
+  padding: 0.65rem 0.9rem;
+  font: inherit;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+}
+
+.auth-form .acoes {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.auth-form .acoes button {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: bold;
+  color: #fff;
+  background: var(--destaque);
+  border: 1px solid var(--destaque);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-form .acoes button.secundario {
+  color: var(--destaque);
+  background: var(--superficie);
+}
+
+.auth-form .acoes button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.dialogo .status {
+  margin: 0.75rem 0 0;
+}
